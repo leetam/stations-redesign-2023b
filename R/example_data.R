@@ -60,6 +60,7 @@ atr_all_data <- atr_data %>%
          occupancy = as.numeric(""))
 
 example_stations_data <- bind_rows(its_stations, atr_all_data)
+saveRDS(example_stations_data, "data/example_stations_data.rds")
 
 testplot <- example_stations_data %>%
   ggplot(aes(x = starttime)) +
